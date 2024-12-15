@@ -43,10 +43,6 @@ st.markdown("""
             text-align: left;
         }
     </style>
-    """,
-    unsafe_allow_html=True,
-)
-    </style>
 """, unsafe_allow_html=True)
 
 st.title("InsureMe")
