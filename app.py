@@ -2,6 +2,33 @@ import pandas as pd
 import streamlit as st
 
 insurance_products = pd.read_excel('product.xlsx')
+import streamlit as st
+
+# เพิ่ม CSS ด้วยฟังก์ชัน st.markdown
+st.markdown("""
+    <style>
+        /* เพิ่มฟอนต์ Kanit จาก Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+        /* กำหนดฟอนต์ให้กับ title และ subheader */
+        h1, h3, p, h5 {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .st-emotion-cache-1104ytp h1 {
+            font-family: 'Kanit', sans-serif;
+            padding: 1.25rem 0px 0rem;
+        }
+
+        .st-emotion-cache-1104ytp h3 {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .st-ax {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 st.title("InsureMe")
 st.subheader("จับคู่แผนประกันการเดินทางที่เหมาะกับคุณ")
