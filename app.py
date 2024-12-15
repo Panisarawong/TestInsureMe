@@ -27,6 +27,25 @@ st.markdown("""
         .st-ax {
             font-family: 'Kanit', sans-serif;
         }
+        div[data-testid="stVerticalBlockBorderWrapper"] {
+            border: 2px solid #ffffff;  /* กำหนดสีกรอบ */
+            padding: 10px;              /* ระยะห่างภายในกรอบ */
+            border-radius: 8px;         /* ขอบกรอบให้มน */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* เงากรอบ */
+        } 
+        .custom-card {
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: left;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
     </style>
 """, unsafe_allow_html=True)
 
@@ -131,7 +150,7 @@ if st.button("ค้นหาประกันที่เหมาะสม"):
 
                 with cols[i]:  
                     st.markdown(f"""
-                        <div>
+                        <div class="custom-card">
                             <h5>{product_name}</h5>
                             <p>ประกันการเดินทาง <b>{type} </b></p>
                             <p>ค่าเบี้ยประกัน <b> {price} บาท</b></p>
